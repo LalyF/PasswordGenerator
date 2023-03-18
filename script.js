@@ -145,15 +145,15 @@ function getPasswordOptions(){
 function generatePassword() {
 
 
-  // Generate the random password
+  // Generate the randompassword
   let randomPassword = "";
       //console.log(charSet)
   for (let i = 0; i < passwordLength; i++) {
     let randomIndex = Math.floor(Math.random() * charSet.length);
-    password += charSet[randomIndex];
+    randomPassword += charSet[randomIndex];
   }
 
-
+//console.log(randomPassword)
 return randomPassword
  
 }
@@ -165,7 +165,7 @@ function writePassword() {
   getPasswordOptions();
 
   var password = generatePassword();
-//console.log(password)
+       //console.log(password)
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
