@@ -119,7 +119,7 @@ function getPasswordOptions(){
    
    if (useLowercase===true) {
      charSet =charSet.concat(lowerCasedCharacters);
-     console.log(charSet)
+    //  console.log(charSet)
     
 
    }
@@ -145,16 +145,16 @@ function getPasswordOptions(){
 function generatePassword() {
 
 
-  // Generate the password
-  let password = "";
+  // Generate the random password
+  let randomPassword = "";
+      //console.log(charSet)
   for (let i = 0; i < passwordLength; i++) {
     let randomIndex = Math.floor(Math.random() * charSet.length);
-    console.log(charSet)
     password += charSet[randomIndex];
   }
 
 
-return password
+return randomPassword
  
 }
 
@@ -162,10 +162,10 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-getPasswordOptions();
+  getPasswordOptions();
 
   var password = generatePassword();
-
+//console.log(password)
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
